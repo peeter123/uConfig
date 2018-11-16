@@ -103,6 +103,7 @@ void PDFFilePage::check()
                 if (start > stop)
                     _complete = false;
             }
+            _pagePreviewLabel->setPixmap(QPixmap::fromImage(_datasheetThread->datasheet()->pageThumbnail(start)));
             _datasheetThread->setRange(start, stop);
         }
     }
